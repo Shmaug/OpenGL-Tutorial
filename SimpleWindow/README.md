@@ -10,9 +10,9 @@ GLFW (GL Framework) is a common cross-platform window and input API that handles
 # Wait, how do I use another library with my code?
 Before we dive into actually using another library, it is important to understand what a "library" really *is*. When you compile a C or C++ file, you end up with an "object" file (`.obj` or `.o`) which contains the compiled code as well as some metadata such as symbols describing names of functions and such. For example, consider the `main.obj` file produced by compiling `main.cpp` from the previous section, running `objdump -t main.obj` shows all the symbols stored within it:
 
-![objdump](https://raw.githubusercontent.com/Shmaug/OpenGL-Tutorial/master/_images/objdump.png)
+![objdump -t](https://raw.githubusercontent.com/Shmaug/OpenGL-Tutorial/master/_images/objdump_t.png)
 
 Additionally, we can see the compiled assembly code by running `objdump -d main.obj`:
 
-![objdump](https://raw.githubusercontent.com/Shmaug/OpenGL-Tutorial/master/_images/objdump_disas.png)
+![objdump -d](https://raw.githubusercontent.com/Shmaug/OpenGL-Tutorial/master/_images/objdump_d.png)
 
