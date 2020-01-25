@@ -1,0 +1,2 @@
+# Creating a Window
+Now that we have a way to compile some code, we can dive into the fun stuff. Naturally, the first step to making things appear on the screen is to ask the operating system for a piece of the screen for us to use, such as a window.
