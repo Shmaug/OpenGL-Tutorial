@@ -63,3 +63,25 @@ is a **local** include directive. The use of `""` quotes here tells the compiler
 # Okay, so how do I compile it?
 
 Now that we have a simple program, we have to figure out how to run it. This is as simple feeding in the path to your `main.cpp` file to a compiler. On Windows, simply run `cl main.cpp` (you won't be able to run this from a regular command prompt, you'll have to use the Visual Studio Developer Command Prompt which comes with Visual Studio), which produces the program `main.exe` and `main.obj`. On Linux, run `g++ main.cpp`, which produces the program `main` and `main.o`.
+
+So, what if we have a dozen C++ files we want to compile together? And what if we have a few libraries we want to use as well? Building from the command line quickly becomes impractical at this point. This is where tools such as Visual Studio become incredibly useful, allowing us to manage as many source files as we need, with a nice interface and buttons and settings for all sorts of compiler options (rather than typing the arguments out by hand). On Linux, Makefiles are a common build system, allowing for build rules to by typed into a file and run by simply running `make`.
+
+Visual Studio defines its projects as *solutions*, which is actually a collection of one or more "projects" which each compile into a program or library. I find the solution-project system to be cumbersome and confusing, and it is also Windows-only.
+
+# Introducing: CMake
+To avoid the unecessary complexities of Visual Studio, I recommend using CMake (and I will be using CMake for this tutorial). In short, CMake is a cross-platform build system. It is used virtually everywhere, and is actually quite simple. Note that if you plan on becoming a serious C++ developer, you will probably have to learn CMake at some point anyways since it is *that* widely used.
+
+To use CMake, all you have to do is write a `CMakeLists.txt` file, then run `cmake <folder>` where `<folder>` is a path to the folder containing `CMakeLists.txt`. CMake will then read the `CMakeLists.txt` and generate a platform-specific build system of your choice (a Visual Studio solution on Windows, or a Makefile on Linux, for example).
+
+On Windows with Visual Studio 2019 with the CMake Tools component installed (described above), it gets even easier. If you write a `CMakeLists.txt` file, then open Visual Studio and just click "Open a local folder" and navigate to the folder containing `CMakeLists.txt`, Visual Studio will run CMake for you, and you won't even see any solution or project files in the first place! (I *HIGHLY* recommend this approach).
+
+## CMake Syntax
+
+Let's build `main.cpp` with CMake. Create a `CMakeLists.txt` in the same folder as `main.cpp`, and simply write:
+```CMake
+add_executable(MyProgram "main.cpp")
+```
+This tells CMake to create an executable program that uses the source file `main.cpp`.
+
+If you have the folder open in Visual Studio, once it updates you will see the `MyProgram.exe` option in dropdown menu by the run button:
+![CMake Target]("")
