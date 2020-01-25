@@ -48,7 +48,7 @@ To avoid the unecessary complexities of Visual Studio, I recommend using CMake (
 
 To use CMake, all you have to do is write a `CMakeLists.txt` file, then run `cmake <folder>` where `<folder>` is a path to the folder containing `CMakeLists.txt`. CMake will then read the `CMakeLists.txt` and generate a platform-specific build system of your choice (a Visual Studio solution on Windows, or a Makefile on Linux, for example).
 
-On Windows with Visual Studio 2019 with the CMake Tools component installed (described above), it gets even easier. If you write a `CMakeLists.txt` file, then open Visual Studio and just click "Open a local folder" and navigate to the folder containing `CMakeLists.txt`, Visual Studio will run CMake for you, and you won't even see any solution or project files in the first place! (I *HIGHLY* recommend this approach).
+On Windows with Visual Studio 2019 with the CMake Tools component installed (described previously), it gets even easier. If you write a `CMakeLists.txt` file, then open Visual Studio and just click "Open a local folder" and navigate to the folder containing `CMakeLists.txt`, Visual Studio will run CMake for you, and you won't even see any solution or project files in the first place! (I *HIGHLY* recommend this approach).
 
 ## CMake Syntax
 
