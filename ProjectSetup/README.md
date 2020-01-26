@@ -56,7 +56,7 @@ Let's build `main.cpp` with CMake. Create a `CMakeLists.txt` in the same folder 
 ```CMake
 add_executable(MyProgram "main.cpp")
 ```
-This tells CMake to create an executable program that uses the source file `main.cpp`.
+This tells CMake to create a "target" called `MyProgram` which is an executable program that uses the source file `main.cpp`.
 
 If you have the folder open in Visual Studio, once it updates you will see the `MyProgram.exe` option in dropdown menu by the run button:
 ![CMake Target](https://raw.githubusercontent.com/Shmaug/OpenGL-Tutorial/master/_images/vs_cmake_target.png)
