@@ -72,4 +72,4 @@ Additionally, since header files are simply included in `.cpp` files, you don't 
 
 We have now created a project with a good build system, that is cross-platform, and allows us to compile any amount of C++ files together into an executable file.
 
-## [Next up: Creating a Window](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/SimpleWindow/README.md)
+## [Next up: Creating a Window](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/SimpleWindow)

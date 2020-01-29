@@ -206,4 +206,4 @@ int main(int argc, char** argv) {
 
 Now we have a window that stays open and receives events until we close it by pressing the X button!
 
-## [Next up: using OpenGL](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/ProjectSetup/README.md)
+## [Next up: using OpenGL](https://github.com/Shmaug/OpenGL-Tutorial/tree/master/BasicOpenGL)

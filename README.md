@@ -26,4 +26,4 @@ Additionally, I recommend using CMake (described later). Visual Studio 2019 has 
 On Linux, `g++` is a good tool to compile C++ projects. Most distributions of Linux come with it, so you should be good to go. Additionally, I recommend using CMake as a build system, which again comes with most distributions of Linux.
 
 
-# [Start here!](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/ProjectSetup/README.md)
+# [Start here!](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/ProjectSetup)
