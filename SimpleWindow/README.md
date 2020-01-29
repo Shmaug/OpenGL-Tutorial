@@ -78,7 +78,7 @@ Your code is composed of a bunch of header files which declare classes and funct
 GLFW is a cross-platform window and input API that handles creating and destroying a window, as well as handling a few other OpenGL specific things. Additionally, it also provides a way to access user input via a mouse and keyboard (or even a joystick) - all without having to interact with any Windows or Linux-specific platforms (which can be a massive pain).
 
 ## Installing GLFW
-To install GLFW, you simply need to download the source and build it, or download precompiled binaries with headers, [both of which can be found here](https://www.glfw.org/download.html). On Windows, simply download the "64-bit Windows binaries" package and extract the zip file to a folder of your choice (I usually put it in my projects folder or something). It might also be useful to rename the folder from `glfw-3.3.2.bin.WIN64` to `glfw3`. On Linux, you can find "glfw3" via your package manager (make sure to get the developer package, usually "glfw3-devel" or "glfw3-dev").
+To install GLFW, you simply need to download the source and build it, or download precompiled binaries with headers, [both of which can be found here](https://www.glfw.org/download.html). On Windows, simply download the "64-bit Windows binaries" package and extract the zip file to a folder of your choice (I usually put it in my projects folder or something). It might also be useful to rename the folder from `glfw-3.3.2.bin.WIN64` to `glfw3`. On Linux, you can find "glfw" via your package manager (make sure to get the developer package as well, usually "glfw-devel" or "glfw-dev").
 
 ## Linking GLFW into your project
 Now that we have the files for GLFW, we just need to tell CMake where they are. 
@@ -112,7 +112,7 @@ target_include_directories(MyProgram PUBLIC "${GLFW_HOME}/include")
 ### Linking GLFW - Linux
 Since the package manager installs it to the global include and library folders, all we have to do is tell CMake to link the glfw library:
 ```CMake
-target_link_libraries(MyProgram "glfw3.a")
+target_link_libraries(MyProgram "libglfw.so")
 ```
 
 ## Initializing GLFW
@@ -205,3 +205,5 @@ int main(int argc, char** argv) {
 ```
 
 Now we have a window that stays open and receives events until we close it by pressing the X button!
+
+## [Next up: using OpenGL](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/ProjectSetup/README.md)

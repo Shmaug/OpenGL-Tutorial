@@ -70,5 +70,6 @@ add_executable(MyProgram "main.cpp" "file2.cpp" "file3.cpp")
 ```
 Additionally, since header files are simply included in `.cpp` files, you don't need to add them to CMake at all.
 
-# Conclusion
-We have now created a project with a good build system, that is cross-platform, and allows us to compile any amount of C++ files together into an executable file. [Next up!](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/SimpleWindow/README.md)
+We have now created a project with a good build system, that is cross-platform, and allows us to compile any amount of C++ files together into an executable file.
+
+## [Next up: Creating a Window](https://github.com/Shmaug/OpenGL-Tutorial/blob/master/SimpleWindow/README.md)
